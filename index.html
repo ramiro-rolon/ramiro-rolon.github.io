@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramiro Rolon - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #3d2914 0%, #5c3d1e 50%, #8b5a2b 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #faf6f0 0%, #f5ebe0 100%);
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4a3728 0%, #6b4423 50%, #8b5a2b 100%);
+            color: #faf6f0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .header .title {
+            font-size: 1.2em;
+            color: #d4a574;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #faf6f0;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: #d4a574;
+            color: #4a3728;
+            border-color: #d4a574;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            color: #4a3728;
+            border-bottom: 2px solid #8b5a2b;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            line-height: 1.7;
+            color: #5c4033;
+            font-size: 1em;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+
+        .job-title, .degree {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #4a3728;
+        }
+
+        .company, .institution {
+            color: #8b5a2b;
+            font-weight: 500;
+        }
+
+        .date {
+            color: #a08060;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        .job-details {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .job-details li {
+            color: #5c4033;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #4a3728;
+        }
+
+        .project-desc {
+            color: #5c4033;
+            margin-top: 5px;
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #8b5a2b;
+            text-decoration: none;
+            font-size: 0.9em;
+            border-bottom: 1px solid #8b5a2b;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #4a3728;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f5ebe0 0%, #ede4d8 100%);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #8b5a2b;
+        }
+
+        .skill-category h4 {
+            color: #4a3728;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .skill-category p {
+            color: #5c4033;
+            font-size: 0.9em;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #8b5a2b;
+            color: #faf6f0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        .footer {
+            background: #4a3728;
+            color: #a08060;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85em;
+        }
+
+        [data-lang="en"] {
+            display: none;
+        }
+
+        body.lang-en [data-lang="es"] {
+            display: none;
+        }
+
+        body.lang-en [data-lang="en"] {
+            display: block;
+        }
+
+        body.lang-en .summary, 
+        body.lang-en .job-details li,
+        body.lang-en .project-desc {
+            display: block;
+        }
+
+        body.lang-en [data-lang="es"] ~ [data-lang="en"] {
+            display: block;
+        }
+
+        .en-content {
+            display: none;
+        }
+
+        body.lang-en .es-content {
+            display: none;
+        }
+
+        body.lang-en .en-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Ramiro Thomas Rolon Castelluccio</h1>
+            <p class="title" data-lang="es">Estudiante de Análisis de Sistemas</p>
+            <p class="title en-content">Systems Analysis Student</p>
+            
+            <div class="contact-info">
+                <span> ramirorolon1301@gmail.com</span>
+                <span> 0223 15-669-7741</span>
+                <span> ramirorolon</span>
+                <span> ramiro-rolon</span>
+            </div>
+
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('es')">Español</button>
+                <button class="lang-btn" onclick="setLang('en')">English</button>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="section">
+                <h2 class="section-title" data-lang="es">Resumen</h2>
+                <h2 class="section-title en-content">Summary</h2>
+                <p class="summary es-content">
+                    Estudiante de tercer año de Análisis de Sistemas con interés en bases de datos, modelado de información
+                    y desarrollo de aplicaciones. Busco mi primera oportunidad profesional en el área de tecnología para seguir
+                    desarrollando habilidades técnicas y participar en proyectos reales.
+                </p>
+                <p class="summary en-content">
+                    Third-year Systems Analysis student with interest in databases, information modeling, and application development. 
+                    Seeking my first professional opportunity in technology to continue developing technical skills and participate in real projects.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title" data-lang="es">Experiencia</h2>
+                <h2 class="section-title en-content">Experience</h2>
+                
+                <div class="experience-item">
+                    <p>
+                        <span class="job-title" data-lang="es">Asesor Comercial</span>
+                        <span class="job-title en-content">Sales Advisor</span>
+                        <span>, </span>
+                        <span class="company">Claro Argentina</span>
+                        <span class="date">Ene 2025 – Ene 2026</span>
+                    </p>
+                    <ul class="job-details es-content">
+                        <li>Atención y asesoramiento a clientes sobre productos y servicios.</li>
+                        <li>Gestión de ventas y cumplimiento de objetivos comerciales.</li>
+                        <li>Desarrollo de habilidades de comunicación y resolución de problemas.</li>
+                    </ul>
+                    <ul class="job-details en-content">
+                        <li>Customer service and consulting on products and services.</li>
+                        <li>Sales management and achievement of commercial objectives.</li>
+                        <li>Development of communication and problem-solving skills.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <p>
+                        <span class="job-title" data-lang="es">Vendedor</span>
+                        <span class="job-title en-content">Salesperson</span>
+                        <span>, </span>
+                        <span class="company">Ceremony</span>
+                        <span class="date">Ene 2022 – Ene 2025</span>
+                    </p>
+                    <ul class="job-details es-content">
+                        <li>Atención al cliente y ventas en local comercial.</li>
+                        <li>Manejo de stock y organización de productos.</li>
+                        <li>Trabajo en equipo en entorno de atención al público.</li>
+                    </ul>
+                    <ul class="job-details en-content">
+                        <li>Customer service and sales in retail store.</li>
+                        <li>Stock management and product organization.</li>
+                        <li>Teamwork in customer service environment.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title" data-lang="es">Educación</h2>
+                <h2 class="section-title en-content">Education</h2>
+                
+                <div class="education-item">
+                    <p>
+                        <span class="degree">Hilet</span>
+                        <span>, </span>
+                        <span class="company" data-lang="es">Tecnicatura en Análisis de Sistemas</span>
+                        <span class="company en-content">Systems Analysis Degree</span>
+                        <span class="date">Ene 2024 – Dic 2026</span>
+                    </p>
+                    <p class="project-desc es-content">Actualmente cursando tercer año. Formación en programación, bases de datos y desarrollo de software.</p>
+                    <p class="project-desc en-content">Currently in third year. Training in programming, databases, and software development.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title" data-lang="es">Proyectos</h2>
+                <h2 class="section-title en-content">Projects</h2>
+                
+                <div class="project-item">
+                    <p class="project-title">Reviewerr</p>
+                    <span class="date">Ene 2025</span>
+                    <p class="project-desc es-content">
+                        Aplicación desarrollada en C# que permite a los usuarios registrarse, iniciar sesión y publicar reseñas sobre películas y series.
+                    </p>
+                    <p class="project-desc en-content">
+                        Application developed in C# that allows users to register, log in, and publish reviews about movies and series.
+                    </p>
+                    <ul class="job-details es-content">
+                        <li>Diseñé y desarrollé la base de datos relacional utilizando MySQL.</li>
+                        <li>Modelé entidades y relaciones para gestionar usuarios, contenido y reseñas.</li>
+                        <li>Implementé consultas SQL para la interacción entre la aplicación y la base de datos.</li>
+                    </ul>
+                    <ul class="job-details en-content">
+                        <li>Designed and developed the relational database using MySQL.</li>
+                        <li>Modeled entities and relationships to manage users, content, and reviews.</li>
+                        <li>Implemented SQL queries for interaction between the application and database.</li>
+                    </ul>
+                    <a class="project-link" href="https://github.com/ramiro-rolon/Proyecto-Reviewerr" target="_blank">
+                        github.com/ramiro-rolon/Proyecto-Reviewerr
+                    </a>
+                </div>
+
+                <div class="project-item">
+                    <p class="project-title" data-lang="es">Partidos Boca</p>
+                    <p class="project-title en-content">Boca Matches</p>
+                    <span class="date">Ene 2023</span>
+                    <p class="project-desc es-content">
+                        Proyecto de análisis de datos donde registré y estructuré todos los partidos del Club Atlético Boca Juniors en la Primera División del fútbol argentino.
+                    </p>
+                    <p class="project-desc en-content">
+                        Data analysis project where I recorded and structured all matches of Club Atlético Boca Juniors in Argentina's First Division football.
+                    </p>
+                    <ul class="job-details es-content">
+                        <li>Diseñé y estructuré tablas de datos en Excel para el almacenamiento eficiente de la información.</li>
+                        <li>Extraje, limpié y analicé información histórica para identificar patrones de rendimiento.</li>
+                        <li>Generé un dashboard interactivo para la visualización y presentación de métricas clave del equipo.</li>
+                    </ul>
+                    <ul class="job-details en-content">
+                        <li>Designed and structured data tables in Excel for efficient information storage.</li>
+                        <li>Extracted, cleaned, and analyzed historical information to identify performance patterns.</li>
+                        <li>Generated an interactive dashboard for visualization and presentation of key team metrics.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title" data-lang="es">Habilidades</h2>
+                <h2 class="section-title en-content">Skills</h2>
+                
+                <div class="skills-list">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">.Net</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MySQL Workbench</span>
+                    <span class="skill-tag" data-lang="es">Inglés Intermedio/Avanzado</span>
+                    <span class="skill-tag en-content">Intermediate/Advanced English</span>
+                </div>
+
+                <div class="skills-grid" style="margin-top: 20px;">
+                    <div class="skill-category">
+                        <h4 data-lang="es">Lenguajes de Programación</h4>
+                        <h4 class="en-content">Programming Languages</h4>
+                        <p>C, C++, C#, .Net</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-lang="es">Bases de Datos</h4>
+                        <h4 class="en-content">Databases</h4>
+                        <p>MySQL, MySQL Workbench</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-lang="es">Modelado y Diseño</h4>
+                        <h4 class="en-content">Modeling and Design</h4>
+                        <p data-lang="es">Modelo Entidad-Relación, Diseño de bases de datos, Consultas SQL</p>
+                        <p class="en-content">Entity-Relationship Model, Database Design, SQL Queries</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-lang="es">Idiomas</h4>
+                        <h4 class="en-content">Languages</h4>
+                        <p data-lang="es">Inglés (Intermedio/Avanzado)</p>
+                        <p class="en-content">English (Intermediate/Advanced)</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Ramiro Thomas Rolon Castelluccio - 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.classList.remove('lang-es', 'lang-en');
+            document.body.classList.add('lang-' + lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
