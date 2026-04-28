@@ -253,12 +253,7 @@
         }
 
         body.lang-en .summary, 
-        body.lang-en .job-details li,
-        body.lang-en .project-desc {
-            display: block;
-        }
-
-        body.lang-en [data-lang="es"] ~ [data-lang="en"] {
+        body.lang-en .job-details li {
             display: block;
         }
 
@@ -280,19 +275,19 @@
         <header class="header">
             <img src="cv-ramiro-rolon.jpg" alt="Ramiro Rolon" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #d4a574; margin-bottom: 20px;">
             <h1>Ramiro Thomas Rolon Castelluccio</h1>
-            <p class="title" data-lang="es">Estudiante de Análisis de Sistemas</p>
-            <p class="title en-content">Systems Analysis Student</p>
+            <p class="title" data-lang="es">Desarrollador Backend</p>
+            <p class="title en-content">Backend Developer</p>
             
             <div class="contact-info">
                 <span> ramirorolon1301@gmail.com</span>
                 <span> 0223 15-669-7741</span>
                 <a href="https://github.com/ramiro-rolon" target="_blank" class="social-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    Ramiro Rolon
+                    ramirorolon
                 </a>
                 <a href="https://linkedin.com/in/ramirorolon" target="_blank" class="social-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    Ramiro Rolon
+                    ramirorolon
                 </a>
             </div>
 
@@ -323,11 +318,32 @@
                 
                 <div class="experience-item">
                     <p>
+                        <span class="job-title" data-lang="es">Desarrollador Freelance</span>
+                        <span class="job-title en-content">Freelance Developer</span>
+                        <span>, </span>
+                        <span class="date">Abr 2024 – presente</span>
+                    </p>
+                    <ul class="job-details es-content">
+                        <li>Diseño y optimización de bases de datos relacionales en MySQL y SQLite.</li>
+                        <li>Desarrollo de aplicaciones backend utilizando C# y .NET, implementando lógica de negocio y conexión con bases de datos.</li>
+                        <li>Testing y debugging de aplicaciones para asegurar correcto funcionamiento.</li>
+                        <li>Gestión de proyectos personales aplicando metodologías ágiles de forma autodidacta.</li>
+                    </ul>
+                    <ul class="job-details en-content">
+                        <li>Design and optimization of relational databases in MySQL and SQLite.</li>
+                        <li>Backend application development using C# and .NET, implementing business logic and database connectivity.</li>
+                        <li>Testing and debugging of applications to ensure proper functionality.</li>
+                        <li>Management of personal projects applying agile methodologies in a self-taught manner.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <p>
                         <span class="job-title" data-lang="es">Asesor Comercial</span>
                         <span class="job-title en-content">Sales Advisor</span>
                         <span>, </span>
-                        <span class="company"> Claro Argentina</span>
-                        <span class="date"> Ene 2025 – Ene 2026</span>
+                        <span class="company">Claro Argentina</span>
+                        <span class="date">Ene 2025 – Ene 2026</span>
                     </p>
                     <ul class="job-details es-content">
                         <li>Atención y asesoramiento a clientes sobre productos y servicios.</li>
@@ -346,8 +362,8 @@
                         <span class="job-title" data-lang="es">Vendedor</span>
                         <span class="job-title en-content">Salesperson</span>
                         <span>, </span>
-                        <span class="company"> Ceremony</span>
-                        <span class="date"> Ene 2022 – Ene 2025</span>
+                        <span class="company">Ceremony</span>
+                        <span class="date">Ene 2022 – Ene 2025</span>
                     </p>
                     <ul class="job-details es-content">
                         <li>Atención al cliente y ventas en local comercial.</li>
@@ -370,12 +386,30 @@
                     <p>
                         <span class="degree">Hilet</span>
                         <span>, </span>
-                        <span class="company" data-lang="es"> Tecnicatura en Análisis de Sistemas</span>
-                        <span class="company en-content"> Systems Analysis Degree</span>
-                        <span class="date"> Ene 2024 – Dic 2026</span>
+                        <span class="company" data-lang="es">Tecnicatura en Análisis de Sistemas</span>
+                        <span class="company en-content">Systems Analysis Degree</span>
+                        <span class="date">Ene 2024 – Dic 2026</span>
                     </p>
-                    <p class="project-desc es-content">Actualmente cursando tercer año. Formación en programación, bases de datos y desarrollo de software.</p>
-                    <p class="project-desc en-content">Currently in third year. Training in programming, databases, and software development.</p>
+                    <p class="project-desc es-content">Actualmente cursando tercer año. Formación en programación, bases de datos y desarrollo de software. Ejes principales adquiridos:</p>
+                    <p class="project-desc en-content">Currently in third year. Training in programming, databases, and software development. Key areas acquired:</p>
+                    <ul class="job-details es-content">
+                        <li>Arquitectura y Gestión de Bases de Datos.</li>
+                        <li>Dominio de lenguaje SQL para consultas complejas, optimización de lógica de datos y normalización.</li>
+                        <li>Desarrollo Backend y Lógica de Programación.</li>
+                        <li>Manejo de arquitecturas cliente-servidor y comprensión de ciclos de vida de software.</li>
+                        <li>Conocimiento en Sistemas Operativos y administración de recursos de hardware/software.</li>
+                        <li>Resolución de problemas mediante pensamiento algorítmico.</li>
+                        <li>Adaptabilidad tecnológica y aprendizaje autónomo (complementado con herramientas de IA).</li>
+                    </ul>
+                    <ul class="job-details en-content">
+                        <li>Database Architecture and Management.</li>
+                        <li>SQL language mastery for complex queries, data logic optimization, and normalization.</li>
+                        <li>Backend Development and Programming Logic.</li>
+                        <li>Client-server architecture management and software lifecycle comprehension.</li>
+                        <li>Knowledge in Operating Systems and hardware/software resource administration.</li>
+                        <li>Problem-solving through algorithmic thinking.</li>
+                        <li>Technological adaptability and autonomous learning (complemented with AI tools).</li>
+                    </ul>
                 </div>
             </section>
 
@@ -385,7 +419,7 @@
                 
                 <div class="project-item">
                     <p class="project-title">Roll-ON</p>
-                    <span class="date">Abril 2026</span>
+                    <span class="date">Abr 2026 – presente</span>
                     <p class="project-desc es-content">
                         Sistema de gestión empresarial integral desarrollado para optimizar la administración y el control operativo de un emprendimiento familiar. La aplicación permite centralizar la información de ventas, inventarios y gestión de usuarios mediante una interfaz dinámica.
                     </p>
@@ -394,14 +428,14 @@
                     </p>
                     <ul class="job-details es-content">
                         <li>Diseñé e implementé la arquitectura de la base de datos relacional utilizando MySQL, asegurando la integridad de los datos y la eficiencia en las consultas.</li>
-                        <li>Desarrollé la lógica del lado del servidor con PHP y la comunicación asíncrona mediante AJAX para mejorar la experiencia de usuario y la fluidez del sistema.</li>
                         <li>Implementé un sistema de autenticación robusto con diferentes niveles de acceso y roles (Administrador/Usuario) para garantizar la seguridad de la información.</li>
+                        <li>Desarrollé la lógica del lado del servidor con PHP para mejorar la experiencia de usuario y la fluidez del sistema.</li>
                         <li>Gestioné el ciclo de vida completo del desarrollo, desde el relevamiento de requisitos hasta el despliegue de funcionalidades clave para la toma de decisiones.</li>
                     </ul>
                     <ul class="job-details en-content">
                         <li>Designed and implemented the relational database architecture using MySQL, ensuring data integrity and query efficiency.</li>
-                        <li>Developed server-side logic with PHP and asynchronous communication using AJAX to enhance user experience and system fluidity.</li>
                         <li>Implemented a robust authentication system with multiple access levels and roles (Admin/User) to ensure information security.</li>
+                        <li>Developed server-side logic with PHP to enhance user experience and system fluidity.</li>
                         <li>Managed the full development lifecycle, from requirement gathering to the deployment of key features for business decision-making.</li>
                     </ul>
                     <a class="project-link" href="https://github.com/ramiro-rolon/ProyectosPersonales" target="_blank">
@@ -411,7 +445,7 @@
 
                 <div class="project-item">
                     <p class="project-title">Reviewerr</p>
-                    <span class="date">Ene 2025</span>
+                    <span class="date">Jun 2025 – Dic 2025</span>
                     <p class="project-desc es-content">
                         Aplicación desarrollada en C# que permite a los usuarios registrarse, iniciar sesión y publicar reseñas sobre películas y series.
                     </p>
@@ -467,12 +501,12 @@
                     <div class="skill-category">
                         <h4 data-lang="es">Lenguajes de Programación</h4>
                         <h4 class="en-content">Programming Languages</h4>
-                        <p>C, C++, C#, .Net</p>
+                        <p>C, C++, C#, .Net, SQL, HTML, CSS, JavaScript</p>
                     </div>
                     <div class="skill-category">
                         <h4 data-lang="es">Bases de Datos</h4>
                         <h4 class="en-content">Databases</h4>
-                        <p>MySQL, MySQL Workbench</p>
+                        <p>MySQL, MySQL Workbench, SQLite</p>
                     </div>
                     <div class="skill-category">
                         <h4 data-lang="es">Modelado y Diseño</h4>
@@ -481,11 +515,37 @@
                         <p class="en-content">Entity-Relationship Model, Database Design, SQL Queries</p>
                     </div>
                     <div class="skill-category">
+                        <h4 data-lang="es">Herramientas</h4>
+                        <h4 class="en-content">Tools</h4>
+                        <p>Excel, JSON</p>
+                    </div>
+                    <div class="skill-category">
                         <h4 data-lang="es">Idiomas</h4>
                         <h4 class="en-content">Languages</h4>
                         <p data-lang="es">Inglés (B2)</p>
                         <p class="en-content">English (B2)</p>
                     </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title" data-lang="es">Cursos</h2>
+                <h2 class="section-title en-content">Courses</h2>
+                
+                <div class="education-item">
+                    <p>
+                        <span class="degree" data-lang="es">CILSA, Programación Web en HTML y CSS</span>
+                        <span class="degree en-content">CILSA, Web Programming in HTML and CSS</span>
+                        <span class="date">Ago 2022 – Dic 2022</span>
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <p>
+                        <span class="degree" data-lang="es">CILSA, Desarrollo en JavaScript</span>
+                        <span class="degree en-content">CILSA, JavaScript Development</span>
+                        <span class="date">Ago 2022 – Dic 2022</span>
+                    </p>
                 </div>
             </section>
         </main>
